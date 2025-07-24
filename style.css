@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
+:root {
+  --font-family: "Lilita One", sans-serif;
+  --background1: #000;
+  --span-color: #ff5714;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #000;
+  line-height: 1.6;
+  text-decoration: none;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.swiper-container-3d {
+  background: #fcfaf7;
+}
+.swiper-wrapper img {
+  height: 60px;
+  width: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.swiper-wrapper img:hover {
+  filter: grayscale(0%);
+}
+
+.inner-box img {
+    width: 100px;
+}
+
+.swiper-slide {
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+    .swiper-slide-active {
+      opacity: 1;
+    }
+
+  /* .swiper-pagination {
+    margin-top: px !important;
+  } */
+@media (min-width: 1201px) and (max-width: 1600px) {
+  .satisfaction-rate {
+    position: absolute;
+    bottom: 20px;
+    left: 500px;
+  }
+
+  .first-section {
+    position: relative;
+  }
+}
+
+
+@media (min-width: 376px) and (max-width: 428px) {
+  .first-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    gap: 30px;
+  }
+
+  .list-cars {
+    padding-top: 30px;
+  }
+
+  .swiper-container-3d {
+    margin-top: 40px;
+  }
+}
+
+
+ @layer utilities {
+            .animate-float {
+                animation: float 6s ease-in-out infinite;
+            }
+            @keyframes float {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-20px); }
+            }
+        }
+
+
+      @layer utilities {
+            .password-strength-weak { @apply bg-red-500; width: 25%; }
+            .password-strength-medium { @apply bg-yellow-500; width: 50%; }
+            .password-strength-strong { @apply bg-green-500; width: 75%; }
+            .password-strength-very-strong { @apply bg-success; width: 100%; }
+        }

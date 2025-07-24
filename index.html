@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="icon" href="Asset/logo/auto.png" type="img/icon">
+  <title>Autosport</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/dist/output.css" />
+</head>
+<body>
+ <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <svg class="h-8 w-8 text-special-color" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+            </svg>
+            <span class="ml-2 text-xl font-bold text-dark">AutoSport</span>
+          </div>
+          
+          <!-- Desktop Menu -->
+          <div class="hidden md:ml-8 md:flex md:space-x-8">
+            <a href="index.html" class="text-dark hover:text-special-color px-3 py-2 text-sm font-medium transition-colors duration-300">Home</a>
+            <a href="about.html" class="text-dark hover:text-special-color px-3 py-2 text-sm font-medium transition-colors duration-300">About</a>
+            <a href="vehicles.html" class="text-dark hover:text-special-color px-3 py-2 text-sm font-medium transition-colors duration-300">Vehicles</a>
+            <a href="contact.html" class="text-dark hover:text-special-color px-3 py-2 text-sm font-medium transition-colors duration-300">Contact</a>
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="login.html" class="text-dark hover:text-special-color px-3 py-2 text-sm font-medium transition-colors duration-300">Login</a>
+          <a href="signup.html" class="bg-special-color hover:bg-hover-colorbg-special-color text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 shadow-sm">Sign Up</a>
+        </div>
+
+        <div class="md:hidden flex items-center">
+          <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-dark hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!-- Menu icon -->
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <!-- Close icon -->
+            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-menu hidden md:hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
+        <a href="index.html" class="text-dark hover:text-special-color block px-3 py-2 text-base font-medium">Home</a>
+        <a href="about.html" class="text-dark hover:text-special-color block px-3 py-2 text-base font-medium">About</a>
+        <a href="vehicles.html" class="text-dark hover:text-special-color block px-3 py-2 text-base font-medium">Vehicles</a>
+        <a href="contact.html" class="text-dark hover:text-special-color block px-3 py-2 text-base font-medium">Contact</a>
+        <div class="pt-4 border-t border-gray-200">
+          <a href="#" class="block px-3 py-2 text-base font-medium text-dark hover:text-primary">Login</a>
+          <a href="#" class="mt-2 block w-full px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-dark bg-special-color hover:bg-hover-color">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+ <section class="container mx-auto flex sm:flex-row lg:flex-row items-center justify-evenly first-section">
+  <!-- LEFT TEXT SECTION -->
+  <div class="lg:max-w-lg lg:mb-14 lg:p-12 space-y-6 text-center lg:text-left">
+    <h5 class="uppercase tracking-wide text-gray-500 text-sm">
+      Trusted by <strong class="text-special-color">14+</strong> brands
+    </h5>
+    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
+      Discover curated premium <span class="text-white -rotate-6 bg-special-color inline-block rounded-md origin-center ">CARS</span> tailored to your exact standards
+    </h2>
+    <div class="flex justify-center lg:justify-start gap-4 pt-4">
+      <button class="px-6 py-3 bg-special-color text-white font-semibold rounded-2xl shadow transition">
+        Get Started
+      </button>
+      <button id="play" class="px-6 py-3 border border-special-color rounded-2xl transition flex items-center hover:bg-special-color hover:text-white gap-2">
+  <i class='bx bxl-youtube text-black'></i> Watch Demo
+</button>
+    </div>
+  </div>
+
+    <div id="videoModal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative">
+            <button id="closeModal" class="absolute top-2 right-2 text-white text-2xl z-10">
+                <span class="bg-red-500 cursor-pointer hover:bg-red-700 rounded-full w-8 h-8 flex items-center justify-center">×</span>
+            </button>
+            <!-- <video id="video" class="w-full h-auto max-w-[90vw] max-h-[90vh]" controls></video> -->
+        </div>
+    </div>
+
+  <!-- RIGHT MEDIA SECTION -->
+  <div class="flex flex-col gap-2 items-center ">
+    <!-- Happy Clients Box -->
+    <div class="bg-black text-white rounded-2xl p-4 w-52 shadow-md lg:mr-64">
+      <h5 class="text-lg font-bold text-center"><strong class="font-bold text-[2rem]">1200+</strong><br><span class="text-sm font-normal">Happy Clients</span></h5>
+      <div class="flex items-center justify-center mt-3 [&>img:not(:first-child)]:-ml-4">
+        <img class="w-8 h-8 rounded-full border-2 border-white" src="Asset/image/person_1.jpg" alt="client" />
+        <img class="w-8 h-8 rounded-full border-2 border-white" src="Asset/image/person_2.jpg" alt="client" />
+        <img class="w-8 h-8 rounded-full border-2 border-white" src="Asset/image/person_3.jpg" alt="client" />
+        <img class="w-8 h-8 rounded-full border-2 border-white" src="Asset/image/person_1.jpg" alt="client" />
+        <img class="w-8 h-8 rounded-full border-2 border-white" src="Asset/image/person_2.jpg" alt="client" />
+        <img class="w-8 h-8 rounded-full border-2 border-white" src="Asset/image/person_3.jpg" alt="client" />
+      </div>
+    </div>
+
+    <!-- Video Display -->
+    <div class="rounded-xl overflow-hidden shadow-lg border-4 border-special-color">
+      <video class="w-[300px] md:w-[540px]" src="Asset/image/car_display.mp4" autoplay muted loop></video>
+    </div>
+
+    <!-- Satisfaction Box -->
+    <div class="bg-special-color border border-gray-200 shadow-sm p-4 rounded-xl text-center satisfaction-rate">
+      <h4 class="text-3xl font-bold text-white">99%</h4>
+      <p class="text-sm text-white">Client Satisfaction</p>
+    </div>
+  </div>
+</section>
+
+<section class="sponsors pt-7">
+  <div class="swiper-container-3d">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="Asset/logo/acura.png" alt="Sponsor 1" class="h-16"></div>
+    <div class="swiper-slide"><img src="Asset/logo/audi.png" alt="Sponsor 2" class="h-16"></div>
+    <div class="swiper-slide"><img src="Asset/logo/benz.png" alt="Sponsor 2" class="h-16"></div>
+    <div class="swiper-slide"><img src="Asset/logo/bmw.png" alt="Sponsor 2" class="h-16"></div>
+    <div class="swiper-slide"><img src="Asset/logo/ford.png" alt="Sponsor 2" class="h-16"></div>
+    <div class="swiper-slide"><img src="Asset/logo/honda.png" alt="Sponsor 2" class="h-16"></div>
+    <div class="swiper-slide"><img src="Asset/logo/hyundai.png" alt="Sponsor 2" class="h-16"></div>
+    <div class="swiper-slide"><img src="Asset/logo/jaguar.png" alt="Sponsor 2" class="h-16"></div>
+    <div class="swiper-slide"><img src="Asset/logo/jeep.png" alt="Sponsor 2" class="h-16"></div>
+    <div class="swiper-slide"><img src="Asset/logo/kia.png" alt="Sponsor 2" class="h-16"></div>
+    <div class="swiper-slide"><img src="Asset/logo/lexus.png" alt="Sponsor 2" class="h-16"></div>
+    <div class="swiper-slide"><img src="Asset/logo/mini.png" alt="Sponsor 2" class="h-16"></div>
+    <div class="swiper-slide"><img src="Asset/logo/toyota.png" alt="Sponsor 2" class="h-16"></div>
+    <div class="swiper-slide"><img src="Asset/logo/ww.png" alt="Sponsor 2" class="h-16"></div>
+  </div>
+</div>
+</section>
+
+
+<main class="max-w-7xl mx-auto px-6 py-12">
+      <h5 class="uppercase tracking-wide text-gray-500 text-sm text-center">ONLY THE BEST CARS</h5>
+    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-center text-gray-900">Our Vehicle Fleet</h2>
+    <p class="font-medium lg:mt-5 text-center text-gray-600">Our meticulously curated fleet features the latest luxury vehicles, each undergoing rigorous 200-point inspections.</p>
+  <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mt-4">
+    <button data-brand="all" class="filter-btn flex-1 min-w-[70px] sm:min-w-[100px] px-4 py-2 text-sm sm:text-base text-white rounded-md bg-special-color">
+      All
+    </button>
+    <button data-brand="mercedes" class="filter-btn flex-1 min-w-[70px] sm:min-w-[100px] px-4 py-2 text-sm sm:text-base text-white rounded-md bg-special-color">
+      Mercedes
+    </button>
+    <button data-brand="porche" class="filter-btn flex-1 min-w-[70px] sm:min-w-[100px] px-4 py-2 text-sm sm:text-base text-white rounded-md bg-special-color">
+      Porche
+    </button>
+    <button data-brand="toyota" class="filter-btn flex-1 min-w-[70px] sm:min-w-[100px] px-4 py-2 text-sm sm:text-base text-white rounded-md bg-special-color">
+      Toyota
+    </button>
+    <button data-brand="bmw" class="filter-btn flex-1 min-w-[70px] sm:min-w-[100px] px-4 py-2 text-sm sm:text-base text-white rounded-md bg-special-color">
+      BMW
+    </button>
+  </div>
+
+<div class="list-cars lg:p-10 sm:pt-10 cursor-pointer w-full">
+  <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+    <div class="card bg-white rounded-xl shadow overflow-hidden break-inside-avoid" data-brand="mercedes">
+      <img src="Asset/image/car1.jpg" alt="Car 1" class="w-full h-auto" />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Mercedes Benz S-Class S500L</h3>
+        <p class="text-black font-bold mb-3">R1,999,000</p>
+        <button class="bg-special-color text-white px-4 py-2 rounded-md delay-100 hover:bg-hover-color transition">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="card bg-white rounded-xl shadow overflow-hidden break-inside-avoid" data-brand="mercedes">
+      <img src="Asset/image/car4.jpg" alt="Car 2" class="w-full h-auto" />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">2019 Mercedes-Benz C-class AMG Line</h3>
+        <p class="text-black font-bold mb-3">R449,950</p>
+        <button class="bg-special-color text-white px-4 py-2 rounded-md hover:bg-hover-color transition">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="card bg-white rounded-xl shadow overflow-hidden break-inside-avoid" data-brand="porche">
+      <img src="Asset/image/car3.jpg" alt="Car 3" class="w-full h-auto" />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">2020 Porche 911 carrera</h3>
+        <p class="text-black font-bold mb-3">R2,099,950</p>
+        <button class="bg-special-color text-white px-4 py-2 rounded-md hover:bg-hover-color transition">Buy Now</button>
+      </div>
+    </div>
+    <div class="card bg-white rounded-xl shadow overflow-hidden break-inside-avoid" data-brand="toyota">
+      <img src="Asset/image/car2.jpg" alt="Car 4" class="w-full h-auto" />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Toyota GR-Supra 3.0T</h3>
+        <p class="text-black font-bold mb-3">R1,524,800</p>
+        <button class="bg-special-color text-white px-4 py-2 rounded-md hover:bg-hover-color transition">Buy Now</button>
+      </div>
+    </div>
+    <div class="card bg-white rounded-xl shadow overflow-hidden break-inside-avoid" data-brand="bmw">
+      <img src="Asset/image/car5.jpg" alt="Car 5" class="w-full h-auto" />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">2021 BMW Competition M3</h3>
+        <p class="text-black font-bold mb-3">R1,549,950</p>
+        <button class="bg-special-color text-white px-4 py-2 rounded-md hover:bg-hover-color transition">Buy Now</button>
+      </div>
+    </div>
+    <div class="card bg-white rounded-xl shadow overflow-hidden break-inside-avoid" data-brand="bmw">
+      <img src="Asset/image/car10.jpg" alt="Car 6" class="w-full h-auto" />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">2018 BMW 320i M-Sport</h3>
+        <p class="text-black font-bold mb-3">R389,950</p>
+        <button class="bg-special-color text-white px-4 py-2 rounded-md hover:bg-hover-color transition">Buy Now</button>
+      </div>
+    </div>
+    <div class="card bg-white rounded-xl shadow overflow-hidden break-inside-avoid" data-brand="mercedes">
+      <img src="Asset/image/car11.jpg" alt="Car 7" class="w-full h-auto" />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">2022 Mercedes-Benz C-Class 220d</h3>
+        <p class="text-black font-bold mb-3">R789,950</p>
+        <button class="bg-special-color text-white px-4 py-2 rounded-md hover:bg-hover-color transition">Buy Now</button>
+      </div>
+    </div>
+    <div class="card bg-white rounded-xl shadow overflow-hidden break-inside-avoid" data-brand="all">
+      <img src="Asset/image/car9.jpg" alt="Car 3" class="w-full h-auto" />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">2019 Bentley Continental GT W12 Coupe</h3>
+        <p class="text-black font-bold mb-3">R3,299,950</p>
+        <button class="bg-special-color text-white px-4 py-2 rounded-md hover:bg-hover-color transition">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="seo flex justify-center">
+  <button class="text-center bg-special-color hover:bg-hover-color text-white py-2 px-4 rounded-lg inline-flex items-center justify-center sm:py-3 w-full sm:w-auto sm:px-6" >Show more</button>
+</div>
+  </main>
+
+
+  <section class="bg-white px-6 md:px-12">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h5 class="text-sm font-semibold text-special-color uppercase tracking-wider">Who We Are</h5>
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mt-3 mb-6 leading-tight">
+        Your Trusted Partner in Premium Car Sales
+      </h2>
+      <p class="text-gray-600 text-lg leading-relaxed">
+        At <strong>AutoSport</strong>, we are passionate about delivering top-quality vehicles to customers nationwide. 
+        With over 15 years of experience in the industry, we’ve built a reputation for reliability, transparency, and exceptional customer service. 
+        Whether you're looking for a luxury sedan, a rugged SUV, or a budget-friendly ride, we have something for everyone.
+      </p>
+      <p class="text-gray-600 mt-4 text-lg">
+        We believe buying a car should be as exciting and smooth as the drive itself — that’s why we provide flexible financing, verified vehicle history, and dedicated after-sales support.
+      </p>
+      <button class="mt-8 inline-flex items-center bg-special-colorl hover:bg-hover-color text-white font-semibold px-6 py-3 rounded-md transition">
+        Learn More About Us
+      </button>
+    </div>
+
+    <div>
+      <img src="Asset/image/about.jpeg" alt="About Us - Car Sales" class="rounded-xl shadow-md w-full object-cover" />
+    </div>
+
+  </div>
+</section>
+
+
+  <section>
+  <div class="text-center max-w-3xl mx-auto px-4">
+    <h5 class="text-gray-500 tracking-wider font-medium uppercase">Taking care of every client</h5>
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mt-2">Key Features</h2>
+    <p class="mt-4 text-gray-600 font-medium">We are all about our client's comfort and safety, that's why we provide the best service.</p>
+  </div>
+
+  <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 max-w-6xl mx-auto"> 
+    <div class="bg-gray-100 rounded-xl shadow hover:shadow-lg transition p-6 flex flex-col items-center text-center">
+      <img src="Asset/logo/icons8-24hr-delivery-70.png" alt="24hr" class="w-16 h-16 mb-4" />
+      <h4 class="font-bold text-gray-800">24 Hours Delivery</h4>
+    </div>
+
+    <div class="bg-gray-100 rounded-xl shadow hover:shadow-lg transition p-6 flex flex-col items-center text-center">
+      <img src="Asset/logo/icons8-technical-support-70.png" alt="Support" class="w-16 h-16 mb-4" />
+      <h4 class="font-bold text-gray-800">24/7 Technical Support</h4>
+    </div>
+
+    <div class="bg-gray-100 rounded-xl shadow hover:shadow-lg transition p-6 flex flex-col items-center text-center">
+      <img src="Asset/logo/icons8-quality-70.png" alt="Quality" class="w-16 h-16 mb-4" />
+      <h4 class="font-bold text-gray-800">Premium Package</h4>
+    </div>
+
+    <div class="bg-gray-100 rounded-xl shadow hover:shadow-lg transition p-6 flex flex-col items-center text-center">
+      <img src="Asset/logo/icons8-confidential-stamp-70.png" alt="Confidential" class="w-16 h-16 mb-4" />
+      <h4 class="font-bold text-gray-800">Absolute Confidentiality</h4>
+    </div>
+  </div>
+</section>
+
+<article class="py-16 px-4 flex justify-center items-center bg-white">
+  <div class="application text-center bg-black rounded-3xl px-6 py-10 max-w-4xl w-full">
+    <h3 class="text-white font-bold text-2xl sm:text-3xl lg:text-4xl leading-relaxed font-mono">
+      Drive your dream car today. Get the app to explore the world of premium cars.
+    </h3>
+
+    <button class="mt-8 flex items-center content-center justify-center gap-1 px-5 py-3 rounded-md bg-special-color hover:bg-hover-color m-auto text-white text-sm sm:text-base font-semibold transition">
+     <img src="Asset/image/icons8-download-64.png" width="30px" alt=""> Download App
+    </button>
+  </div>
+</article>
+
+<section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 to-gray-100">
+    <h5 class="uppercase tracking-wide text-gray-500 text-sm text-center">community</h5>
+    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-center text-gray-900">Join Our Community</h2>
+    <p class="font-medium lg:mt-5 leading-4 text-center text-gray-600">Join our vibrant car enthusiast community for daily updates on the latest models, expert reviews, and exclusive deals.</p>
+
+  <div class="max-w-7xl mx-auto pt-8">
+    <div class="flex flex-col lg:flex-row items-center gap-12">
+
+      <div class="lg:w-1/2 space-y-6">
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Get daily updates on the hottest car models, expert reviews, and exclusive member deals. 
+          Connect with thousands of passionate car lovers just like you!
+        </p>
+        
+        <div class="space-y-4">
+          <div class="flex items-center space-x-2">
+            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span>Exclusive early access to car releases</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span>Private member-only events</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span>24/7 expert advice</span>
+          </div>
+        </div>
+        
+      
+        <div class="mt-8">
+          <div class="flex flex-col sm:flex-row gap-3">
+            <input 
+              type="email" 
+              placeholder="Your email address" 
+              class="px-4 py-3 w-full rounded-lg border border-gray-300 focus:ring-2 focus:bg-special-color focus:border-transparent"
+            >
+            <button class="px-6 py-3 bg-special-color hover:bg-hover-color text-white font-medium rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+              Join Now
+            </button>
+          </div>
+        </div>
+        
+        
+        <div class="flex space-x-4 mt-6">
+          <a href="#" class="p-2 bg-white rounded-full shadow-md hover:bg-blue-50 transition-colors">
+            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+            </svg>
+          </a>
+          <a href="#" class="p-2 bg-white rounded-full shadow-md hover:bg-pink-50 transition-colors">
+            <svg class="w-6 h-6 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+          <a href="#" class="p-2 bg-white rounded-full shadow-md hover:bg-black/5 transition-colors">
+            <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+
+      <div class="lg:w-1/2">
+        <div class="relative rounded-xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+          <img 
+            src="Asset/image/showroom.jpeg" 
+            alt="Car community meetup"
+            class="w-full h-auto object-cover"
+            loading="lazy"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+            <div class="text-white">
+              <p class="text-sm font-semibold">FEATURED EVENT</p>
+              <h3 class="text-xl font-bold mt-1">Annual Car Show 2023</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="py-10 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+       <h5 class="text-gray-500 tracking-wider font-medium uppercase text-center">Taking care of every client</h5>
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mt-2 text-center">Key Features</h2>
+    <p class="mt-4 text-gray-600 font-medium text-center">We are all about our client's comfort and safety, that's why we provide the best service.</p>
+      
+      <div class="relative pt-14">
+        <div class="swiper testimonial-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover">
+                    <div class="ml-4">
+                      <h4 class="font-semibold">Sarah Johnson</h4>
+                      <p class="text-sm text-gray-500">CEO, TechSolutions</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-600">"The service was exceptional! Our team's productivity increased by 40% after implementing their solution."</p>
+                  <div class="mt-4 flex text-yellow-400">
+                    ★★★★★
+                  </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover">
+                    <div class="ml-4">
+                      <h4 class="font-semibold">Michael Chen</h4>
+                      <p class="text-sm text-gray-500">Marketing Director</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-600">"Their attention to detail and customer support is unmatched in the industry. Highly recommended!"</p>
+                  <div class="mt-4 flex text-yellow-400">
+                    ★★★★☆
+                  </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover">
+                    <div class="ml-4">
+                      <h4 class="font-semibold">Emily Rodriguez</h4>
+                      <p class="text-sm text-gray-500">Product Manager</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-600">"We've tried many solutions but this one stands out for its simplicity and effectiveness."</p>
+                  <div class="mt-4 flex text-yellow-400">
+                    ★★★★★
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="swiper-slide">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover">
+                    <div class="ml-4">
+                      <h4 class="font-semibold">David Wilson</h4>
+                      <p class="text-sm text-gray-500">CTO, InnovateCo</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-600">"The implementation was seamless and the results were visible within the first week of use."</p>
+                  <div class="mt-4 flex text-yellow-400">
+                    ★★★★★
+                  </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/women/54.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover">
+                    <div class="ml-4">
+                      <h4 class="font-semibold">Jessica Lee</h4>
+                      <p class="text-sm text-gray-500">Operations Manager</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-600">"Their team went above and beyond to ensure our specific needs were met perfectly."</p>
+                  <div class="mt-4 flex text-yellow-400">
+                    ★★★★☆
+                  </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover">
+                    <div class="ml-4">
+                      <h4 class="font-semibold">Robert Taylor</h4>
+                      <p class="text-sm text-gray-500">Financial Analyst</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-600">"The cost-benefit ratio is excellent. We've seen ROI in just two months of using their service."</p>
+                  <div class="mt-4 flex text-yellow-400">
+                    ★★★★★
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="swiper-slide">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/women/89.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover">
+                    <div class="ml-4">
+                      <h4 class="font-semibold">Amanda Smith</h4>
+                      <p class="text-sm text-gray-500">HR Director</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-600">"The training and onboarding process was so smooth that all our employees adapted quickly."</p>
+                  <div class="mt-4 flex text-yellow-400">
+                    ★★★★☆
+                  </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover">
+                    <div class="ml-4">
+                      <h4 class="font-semibold">Daniel Brown</h4>
+                      <p class="text-sm text-gray-500">Sales Executive</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-600">"This solution helped us streamline our sales process and close deals faster than ever before."</p>
+                  <div class="mt-4 flex text-yellow-400">
+                    ★★★★★
+                  </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                  <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover">
+                    <div class="ml-4">
+                      <h4 class="font-semibold">Olivia Martinez</h4>
+                      <p class="text-sm text-gray-500">Creative Director</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-600">"The design integration was flawless and elevated our brand's visual identity significantly."</p>
+                  <div class="mt-4 flex text-yellow-400">
+                    ★★★★★
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="swiper-pagination"></div>
+       
+    </div>
+  </section>
+
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+
+  <h5 class="text-gray-500 tracking-wider font-medium uppercase text-center">AVAILABLE VEHICLES</h5>
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mt-2 text-center">New Arrivals</h2>
+    <p class="mt-4 text-gray-600 font-medium text-center">Discover the latest additions to our premium car collection. From sleek sedans to powerful SUVs, our new arrivals are handpicked to offer style, performance, and unmatched comfort.</p>
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col lg:flex-row gap-12 items-center">
+      <div class="lg:w-1/2">
+        <div class="relative rounded-xl overflow-hidden shadow-xl aspect-w-16 aspect-h-9">
+         <video  class="w-full h-96 lg:h-full"  src="Asset/image/car_display2.mp4" muted loop autoplay></video>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2 space-y-8">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+          Explore Our <span class="text-special-color">Latest</span> Models
+        </h2>
+        
+      
+        <div class="space-y-6">
+          <!-- Car 1 -->
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <img 
+                src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                alt="2023 Tesla Model S" 
+                class="w-24 h-24 object-cover rounded-lg"
+                loading="lazy"
+              >
+            </div>
+            <div>
+              <h3 class="font-bold text-lg">2024 Tesla Model S Plaid</h3>
+              <p class="text-gray-600 text-sm mt-1">0-60mph in 1.99s • 396mi range</p>
+              <p class="text-gray-700 mt-2">Redesigned with a yoke steering wheel and tri-motor AWD delivering 1,020 horsepower.</p>
+              <div class="mt-2 flex items-center">
+                <span class="text-special-color font-medium">Starting at $89,990</span>
+                <span class="mx-2 text-gray-400">|</span>
+                <span class="text-sm text-green-600">Available Now</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Car 2 -->
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <img 
+                src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                alt="2023 Porsche 911" 
+                class="w-24 h-24 object-cover rounded-lg"
+                loading="lazy"
+              >
+            </div>
+            <div>
+              <h3 class="font-bold text-lg">2024 Porsche 911 Turbo S</h3>
+              <p class="text-gray-600 text-sm mt-1">640hp • 205mph top speed</p>
+              <p class="text-gray-700 mt-2">The ultimate sports car with enhanced aerodynamics and PDK transmission.</p>
+              <div class="mt-2 flex items-center">
+                <span class="text-special-color font-medium">Starting at $207,000</span>
+                <span class="mx-2 text-gray-400">|</span>
+                <span class="text-sm text-green-600">Available Now</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <img 
+                src="https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                alt="2023 Rivian R1T" 
+                class="w-24 h-24 object-cover rounded-lg"
+                loading="lazy"
+              >
+            </div>
+            <div>
+              <h3 class="font-bold text-lg">2024 Rivian R1T Adventure</h3>
+              <p class="text-gray-600 text-sm mt-1">314mi range • 3s 0-60mph</p>
+              <p class="text-gray-700 mt-2">Electric adventure vehicle with gear tunnel and tank turn capability.</p>
+              <div class="mt-2 flex items-center">
+                <span class="text-special-color font-medium">Starting at $73,000</span>
+                <span class="mx-2 text-gray-400">|</span>
+                <span class="text-sm text-yellow-600">Pre-Order</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <a href="#inventory" class="inline-block bg-special-color hover:bg-hover-color text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300 shadow-md hover:shadow-lg">
+            View Full Inventory
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-4xl mx-auto px-4 py-16">
+  <h5 class="text-gray-500 tracking-wider font-medium uppercase text-center">GET ANSWERS</h5>
+<h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mt-2 text-center">Frequently Asked Questions</h2>
+<p class="mt-4 text-gray-600 font-medium text-center">
+  Find quick answers to common questions about our car sales process, financing options, vehicle conditions, and more. We’re here to make your car buying experience smooth and stress-free.
+</p>
+
+
+  <div class="space-y-7 pt-10">
+    <div class="border border-gray-200 rounded-lg overflow-hidden">
+      <button class="w-full flex justify-between items-center p-5 bg-gray-100 text-left text-gray-800 font-semibold faq-toggle">
+        <span>Can I test drive a car before buying?</span>
+        <svg class="w-5 h-5 transition-transform transform faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div class="faq-answer hidden px-5 py-4 text-gray-600 bg-white">
+        Absolutely! You can schedule a test drive online or visit our showroom to experience the car before making a decision.
+      </div>
+    </div>
+
+    
+    <div class="border border-gray-200 rounded-lg overflow-hidden">
+      <button class="w-full flex justify-between items-center p-5 bg-gray-100 text-left text-gray-800 font-semibold faq-toggle">
+        <span>Do you offer installment payment options?</span>
+        <svg class="w-5 h-5 transition-transform transform faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div class="faq-answer hidden px-5 py-4 text-gray-600 bg-white">
+        Yes, we provide flexible financing and installment plans through trusted partners. You can apply online or in-store.
+      </div>
+    </div>
+
+    
+    <div class="border border-gray-200 rounded-lg overflow-hidden">
+      <button class="w-full flex justify-between items-center p-5 bg-gray-100 text-left text-gray-800 font-semibold faq-toggle">
+        <span>Are all vehicles brand new?</span>
+        <svg class="w-5 h-5 transition-transform transform faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div class="faq-answer hidden px-5 py-4 text-gray-600 bg-white">
+        We sell both brand new and certified pre-owned vehicles, all thoroughly inspected and backed with warranty.
+      </div>
+    </div>
+
+    
+    <div class="border border-gray-200 rounded-lg overflow-hidden">
+      <button class="w-full flex justify-between items-center p-5 bg-gray-100 text-left text-gray-800 font-semibold faq-toggle">
+        <span>What documents do I need to buy a car?</span>
+        <svg class="w-5 h-5 transition-transform transform faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div class="faq-answer hidden px-5 py-4 text-gray-600 bg-white">
+        You’ll need a valid ID, proof of address, and in some cases, proof of income. Our sales team will guide you through the process.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-20 px-6 md:px-12">
+ <h5 class="text-gray-500 tracking-wider font-medium uppercase text-center">GET IN TOUCH</h5>
+<h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mt-2 text-center">Contact Our Team</h2>
+<p class="mt-4 text-gray-600 font-medium text-center">
+  Reach out for personalized assistance with vehicle inquiries, test drive scheduling, or financing options.
+</p>
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-10">
+
+    <div>
+      <h5 class="text-special-color text-sm font-semibold uppercase tracking-wider">Get in Touch</h5>
+      <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mt-3 mb-6 leading-tight">
+        We'd love to hear from you
+      </h2>
+      <p class="text-gray-600 text-lg leading-relaxed mb-6">
+        Whether you have a question about a vehicle, need help with financing, or want to schedule a visit — our team is ready to assist you. 
+        Reach out and let’s get you closer to your dream car.
+      </p>
+
+      
+      <ul class="space-y-4 text-gray-700 text-base">
+        <li><strong>📍 Address:</strong> 123 Auto Lane, Lagos, Nigeria</li>
+        <li><strong>📞 Phone:</strong> +234 812 345 6789</li>
+        <li><strong>✉️ Email:</strong> info@autodrive.ng</li>
+      </ul>
+    </div>
+
+    
+<div class="bg-white p-8 rounded-xl shadow-lg">
+  <form action="#" method="POST" class="space-y-5">
+    
+    <div>
+      <label class="block text-gray-700 font-medium mb-1">Full Name</label>
+      <input type="text" name="full_name" placeholder="justdavid_tech"
+        class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        required>
+    </div>
+
+    <div>
+      <label class="block text-gray-700 font-medium mb-1">Email Address</label>
+      <input type="email" name="email" placeholder="you@example.com"
+        class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        required>
+    </div>
+
+    <div>
+      <label class="block text-gray-700 font-medium mb-1">Phone Number</label>
+      <input type="tel" name="phone" placeholder="+234 812 345 6789"
+        class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        required>
+    </div>
+
+    <div>
+      <label class="block text-gray-700 font-medium mb-1">Car of Interest</label>
+      <select name="car" class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:bg-special-color" required>
+        <option disabled selected>Select a car</option>
+        <option value="suv">SUV</option>
+        <option value="sedan">Sedan</option>
+        <option value="pickup">Pickup Truck</option>
+        <option value="sports">Sports Car</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block text-gray-700 font-medium mb-1">Your Budget (₦)</label>
+      <input type="text" name="budget" placeholder="₦5,000,000"
+        class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+    </div>
+
+    <div>
+      <label class="block text-gray-700 font-medium mb-1">Additional Message</label>
+      <textarea name="message" rows="4" placeholder="Tell us more about what you need..."
+        class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:special-color"></textarea>
+    </div>
+
+    <button type="submit"
+      class="w-full bg-special-color hover:bg-hover-color text-white font-semibold py-3 px-6 rounded-md transition duration-300">
+      Submit Request
+    </button>
+
+  </form>
+</div>
+</section>
+
+<footer class="bg-gray-900 text-white w-full">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      
+      <div class="space-y-4">
+        <div class="flex items-center">
+          <svg class="h-8 w-8 text-special-color" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+          </svg>
+          <span class="ml-2 text-2xl font-bold">AutoSport</span>
+        </div>
+        <p class="text-gray-400">
+          Your trusted partner for premium vehicles since 2010. We redefine car buying with transparency and excellence.
+        </p>
+        <div class="flex space-x-4 pt-2">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <span class="sr-only">Facebook</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <span class="sr-only">Instagram</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <span class="sr-only">Twitter</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors">New Arrivals</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Pre-Owned Vehicles</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Finance Calculator</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Schedule Test Drive</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Special Offers</a></li>
+        </ul>
+      </div>
+
+      <!-- Customer Service -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold">Customer Service</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors">FAQs</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Warranty Info</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Service Center</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold">Contact Us</h3>
+        <address class="not-italic text-gray-400">
+          <div class="flex items-start space-x-3 mb-3">
+            <svg class="h-5 w-5 text-special-color mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span>123 Auto Sport, Motor City, MC 12345</span>
+          </div>
+          <div class="flex items-center space-x-3 mb-3">
+            <svg class="h-5 w-5 text-special-color" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <a href="tel:+18005551234" class="hover:text-white transition-colors">(800) 555-1234</a>
+          </div>
+          <div class="flex items-center space-x-3">
+            <svg class="h-5 w-5 text-special-color" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <a href="mailto:info@autoelite.com" class="hover:text-white transition-colors">info@autoelite.com</a>
+          </div>
+        </address>
+        
+        <!-- Newsletter -->
+        <div class="pt-2">
+          <h4 class="text-sm font-semibold mb-2">NEWSLETTER SIGNUP</h4>
+          <div class="flex">
+            <input type="email" placeholder="Your email" class="px-3 py-2 bg-gray-800 text-white rounded-l-md focus:outline-none focus:ring-1 focus:special-color w-full">
+            <button class="bg-special-color hover:bg-hover-color px-4 py-2 rounded-r-md transition-colors">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-gray-800 my-8"></div>
+
+    <!-- Copyright -->
+    <div class="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+      <p>© 2023 AutoSport. All rights reserved.</p>
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition-colors">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
